@@ -9,8 +9,10 @@ import { RecipeItemComponent} from './recipe-item.component';
   templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-  recipes : Recipe[] = [];
-  recipe = new Recipe('Dummy', 'Dummy Description', 'http://aacc.co.il/new/wp-content/uploads/2016/06/pojo-placeholder-2.png');
+  recipes : Recipe[] = [
+    new Recipe('Schnitzel', 'Dummy Description', 'http://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-7_edited.jpg', []),
+    new Recipe('Summer Salad', 'Dummy Description 2', 'http://cdn.iowagirleats.com/wp-content/uploads/2013/05/Triple-Berry-Summer-Salad-03_mini.jpg', []),
+  ];
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
   constructor() { }
