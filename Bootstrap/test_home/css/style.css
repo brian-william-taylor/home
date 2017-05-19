@@ -1,0 +1,393 @@
+body {
+  background-color: #FAFBFA ;
+  transition: background-color .5s;
+  font-family: 'Exo', sans-serif;
+  overflow-x: hidden;
+}
+
+.overlay{
+  background-color: rgba(0,0,0,0.4) !important;
+}
+
+/*
+=======================================================================================================
+                                          SIDEBAR
+======================================================================================================
+*/
+
+.sidebar{
+    z-index: 100;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: left;
+    position: fixed;
+    padding-left: 20px;
+    width: 210px;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    color: #ccc;
+    margin-bottom: 20px;
+    height: 100vh;
+    box-shadow: 0px 10px 10px #888888;
+}
+
+ .sidebar-show{
+  width: 210px !important;
+ padding-left: 20px !important;
+}
+
+ul{
+    -webkit-padding-start: 0px;
+}
+
+.sidebar ul li{
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  margin-bottom: 10px;
+  font-size: 22px;
+  list-style: none;
+  line-height: 2.0em;
+  display: block;
+  -webkit-padding-start: 0px;
+}
+
+.sidebar .material-icons{
+  font-size: 30px;
+  position: relative;
+  top: 6px;
+  left: -8px;
+}
+
+.sidebar a {
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+ color: #979797;
+ font-size: 16px;
+}
+
+.sidebar .active{
+  border-right: 5px solid #515867;
+}
+
+.sidebar .active a{
+   color: #515867;
+}
+
+.sidebar li:hover{
+  cursor: pointer;
+  border-right: 5px solid #515867;
+}
+
+.sidebar li:hover a{
+  color: #515867;
+  text-decoration:none;
+}
+
+/*
+=======================================================================================================
+                                          LOGO
+======================================================================================================
+*/
+
+.logo{
+  height: 120px;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  margin-left: -30px;
+  
+}
+
+.logo img{
+  margin-left: 10px;
+  width: 160px; 
+}
+
+.logo h1{
+  margin-left: 15px;
+  margin-right: 10px;
+  color: #515867;
+  font-family: 'Exo', sans-serif;
+  font-size: 32px;
+  border-radius: 25px;
+  border: 5px solid #515867;
+}
+
+
+
+/*
+=======================================================================================================
+                                          Media Queries
+======================================================================================================
+*/
+
+@media only screen and (max-width: 768px) {
+      .navbar{
+          left: 0px; 
+      }
+
+      .sidebar{
+        width: 0px;
+        padding: 0px;
+      }
+
+      .menu-button{
+        display: inline;
+      }
+
+      #main .container{
+        padding:0px;
+      }
+
+      #main .row{
+        margin:0px;
+      }
+
+  }
+
+    @media only screen and (min-width: 769px) {
+      .navbar{
+          margin-left: 210px; 
+      }
+
+      .menu-button{
+        display: none;
+      }
+
+     #main .container{
+        padding-left:210px;
+      }
+
+  }
+
+
+/*
+=======================================================================================================
+                                          HEADER
+======================================================================================================
+*/
+
+.navbar{
+  box-shadow: 0 1px 4px 0 rgba(99,114,130,0.15);
+  transition: 0.5s;
+  background-color: #515867;
+  height: 75px;
+  border: none;
+  width: 100%;
+}
+
+.navbar-nav{
+  margin-right: 230px;
+}
+
+
+.navbar h1{
+   color: white;
+   font-size: 30px;
+   margin-left: 50px;
+}
+
+ .navbar .nav-icons{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 5px;
+   margin-right: 6px;
+   font-size: 33px;
+   color: white;
+   cursor: pointer;
+ }
+
+ .navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.navbar .dropdown{
+   height: 33px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.navbar .dropdown-toggle{
+  line-height: 30px;
+  padding-top: 0px;
+  padding-right: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown > .dropdown-toggle:hover,
+.dropdown > .dropdown-toggle:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus{
+  text-decoration: none;
+  background-color: transparent;
+} 
+
+.dropdown > .dropdown-toggle span{
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+  left: 5px;
+}
+
+.dropdown > .dropdown-toggle b{
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+}
+
+.dropdown-toggle .material-icons{
+    padding-right: 5px;
+    font-size: 33px;
+    color: white;
+}
+
+
+/*
+=======================================================================================================
+                                      USER CARDS                                 
+======================================================================================================
+*/
+
+#main{
+  width: 100%;
+}
+
+.user-card{
+  text-align: center;
+  width: 280px;
+  max-width: 350px;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 1px 3px 10px #ccc;
+}
+
+.user-card img{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.user-card .name{ 
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.user-card .email{ 
+  font-family: 'Exo', sans-serif;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.user-card .buttons{
+  margin-top: 15px;
+  border: 0px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.user-card button{ 
+  vertical-align: middle;
+  color: #515867;
+  font-family: 'Exo', sans-serif;
+  font-size: 12px;
+  width: 49%;
+  height: 50px;
+  background-color: white;
+   border: 0px;
+}
+
+.user-card button span{
+  position: relative;
+  top: -5px;
+}
+
+.user-card button:hover{
+  color: white;
+  background-color: #515867
+}
+
+.user-card .info-row{
+  text-align: left;
+}
+
+.user-card .info b{
+  padding-left: 40px;
+}
+
+.user-card .info span{
+  text-align: left;
+  float: left;
+  width: 120px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.user-card .info span .material-icons{
+  font-size: 15px;
+  position: relative;
+  top: 2px;
+  left: -8px;
+}
+
+
+/*
+=======================================================================================================
+                                      Contacts                                 
+======================================================================================================
+*/
+
+.roomate-header{
+  padding: 25px;
+}
+
+.roomate-header strong{
+  color: #515867;
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+}
+
+.roomate-header button{
+    background-color: #515867;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: 1px solid #515867;
+}
+
+.roomate-header button:hover, 
+.roomate-header button:focus{
+  color: #515867;
+  background-color: white;
+  border: 1px solid #515867;
+  text-decoration: none;
+}

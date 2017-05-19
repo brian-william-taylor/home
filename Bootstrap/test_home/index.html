@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FairShare</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-header">
+      <i class="material-icons menu-button" onclick="openSidebar()" style="display:none;">menu</i>
+      <i class="material-icons menu-button" onclick="closeSidebar()" style="display:none;">close</i>
+      <h1>Contacts</h1>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <i class="material-icons nav-icons">notifications</i>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+          <i class="material-icons">account_circle</i>
+          <b>Brian Taylor</b>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <div class="navbar-login">
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="text-center">
+                    <span class="glyphicon glyphicon-user icon-size"></span>
+                  </p>
+                </div>
+                <div class="col-lg-8">
+                  <p class="text-left"><strong>Brian Taylor</strong></p>
+                  <p class="text-left small">840 Dundas Street West, Mississauga</p>
+                  <p class="text-left">
+                    <a href="#" class="btn btn-primary btn-block btn-sm">Profile</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="divider navbar-login-session-bg"></li>
+          <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+          <li class="divider"></li>
+          <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+          <li class="divider"></li>
+          <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+          <li class="divider"></li>
+          <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+          <li class="divider"></li>
+          <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div id="sidebar" class="sidebar">
+    <div class="logo">
+      <img src="logo.png" />
+    </div>
+    <ul>
+      <li><a href=""><i class="material-icons">home</i> Home</a></li>
+      <li><a href=""><i class="material-icons">local_atm</i> Bills</a></li>
+      <li><a href=""><i class="material-icons">event</i> Calendar</a></li>
+      <li><a href=""><i class="material-icons">local_laundry_service</i> Chores</a></li>
+      <li class='active'><a href=""><i class="material-icons">supervisor_account</i> Contacts</a></li>
+    </ul>
+  </div>
+
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="roomate-header">
+          <strong>House Info</strong>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="roomate-header">
+          <strong>Roomates</strong>
+          <button>Add Roomate</button>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+          <div class="user-card">
+            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCMH1oJb9_ryQTCILdmNhcmRfcGhvdG8qKDlkZTdkNDMwOWJkNjQwYjcwMDllNDE5NzkwMGQxNTM3YmNhNGE4YzgwAbmxH0_yXnw4JFhaUa9IcfAODKZW"
+            />
+            <br/>
+            <h6 class="name">Patrick Vickery</h6>
+            <h6 class="email">patrick.vickery@gmail.com</h6>
+            <hr>
+            <div class="info">
+              <div class="info-row">
+                <span><i class="material-icons">attach_money</i>Rent</span>
+                <b>$1500.00</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">access_time</i>Contract Length</span>
+                <b>12 Months</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">event</i>Move Out Date</span>
+                <b>May 1, 2017</b>
+              </div>
+              <br/>
+            </div>
+            <div class="buttons">
+              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+              <button><i class="material-icons">delete</i> <span>Remove</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+          <div class="user-card">
+            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCOHQ7pqKu_S1BSILdmNhcmRfcGhvdG8qKDg2MmM4MDlmMTc4MzU4NWU4MjMwN2VkYTBlMmI1Y2Q2ZjM5YmY0NjAwAc-jR0peNIlxCXQi6nqSaAdCjHnx"
+            />
+            <br/>
+            <h6 class="name">Mike Dopsa</h6>
+            <h6 class="email">mike.dopsa@gmail.com</h6>
+            <hr>
+            <div class="info">
+              <div class="info-row">
+                <span><i class="material-icons">attach_money</i>Rent</span>
+                <b>$1500.00</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">access_time</i>Contract Length</span>
+                <b>12 Months</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">event</i>Move Out Date</span>
+                <b>May 1, 2017</b>
+              </div>
+              <br/>
+            </div>
+            <div class="buttons">
+              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+              <button><i class="material-icons">delete</i> <span>Remove</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+          <div class="user-card">
+            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECK3u3_bf7Jet1wEiC3ZjYXJkX3Bob3RvKig1NzE2MmM4MjM1N2I1M2YzMmU5ZThkNzE1NzIwNzlmYjk3MzRiMmJiMAHIpIz-8mbFiArKvKFtvFrUHJzoiw"
+            />
+            <br/>
+            <h6 class="name">Swapnil Shah</h6>
+            <h6 class="email">swapnil.shah@gmail.com</h6>
+            <hr>
+            <div class="info">
+              <div class="info-row">
+                <span><i class="material-icons">attach_money</i>Rent</span>
+                <b>$1500.00</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">access_time</i>Contract Length</span>
+                <b>12 Months</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">event</i>Move Out Date</span>
+                <b>May 1, 2017</b>
+              </div>
+              <br/>
+            </div>
+            <div class="buttons">
+              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+              <button><i class="material-icons">delete</i> <span>Remove</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+          <div class="user-card">
+            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECNbxse7u_LG_zwEiC3ZjYXJkX3Bob3RvKihjZDEyNzllYTEzZDc2MGM3YTMwMThkZWFiYjlmNjEyNzA5MTMwZDA1MAGNXnF3R9PvUVDtCGquZGLaoe09eA"
+            />
+            <br/>
+            <h6 class="name">Gordan Monk</h6>
+            <h6 class="email">gord.monk@gmail.com</h6>
+            <hr>
+            <div class="info">
+              <div class="info-row">
+                <span><i class="material-icons">attach_money</i>Rent</span>
+                <b>$1500.00</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">access_time</i>Contract Length</span>
+                <b>12 Months</b>
+              </div>
+              <br/>
+              <div class="info-row">
+                <span><i class="material-icons">event</i>Move Out Date</span>
+                <b>May 1, 2017</b>
+              </div>
+              <br/>
+            </div>
+            <div class="buttons">
+              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+              <button><i class="material-icons">delete</i> <span>Remove</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="roomate-header">
+          <strong>Contacts</strong>
+          <button>Add Contact</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+          <div class="user-card">
+            <h6 class="name">Patrick Vickery</h6>
+            <h6 class="email">patrick.vickery@gmail.com</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
