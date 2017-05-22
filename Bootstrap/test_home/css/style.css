@@ -88,6 +88,21 @@ ul{
   text-decoration:none;
 }
 
+
+.sidebar-overlay{
+  position:fixed;
+  display:none;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(0,0,0,0.5);
+  z-index:2;
+  animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}
+}
+
 /*
 =======================================================================================================
                                           LOGO
@@ -136,16 +151,21 @@ ul{
         padding: 0px;
       }
 
-      .menu-button{
-        display: inline;
+      #menu-button{
+        color: white;
+        position: absolute;
+        display: inline-block;
+        padding-top: 20px;
+        padding-left: 10px;
+        font-size: 32px;
       }
 
-      #main .container{
+      .navbar h1{
+        text-align: center;
+      }
+
+      #main{
         padding:0px;
-      }
-
-      #main .row{
-        margin:0px;
       }
 
   }
@@ -155,12 +175,16 @@ ul{
           margin-left: 210px; 
       }
 
-      .menu-button{
+      #menu-button{
         display: none;
       }
 
-     #main .container{
-        padding-left:210px;
+     #main{
+        padding-left:220px;
+      }
+
+      .navbar h1{
+        text-align: left;
       }
 
   }
@@ -348,6 +372,87 @@ ul{
   top: 2px;
   left: -8px;
 }
+
+/*
+=======================================================================================================
+                                      Contact CARDS                                 
+======================================================================================================
+*/
+
+.contact-card{
+  text-align: center;
+  width: 280px;
+  max-width: 350px;
+  margin-bottom: 30px;
+  box-shadow: 1px 3px 10px #ccc;
+}
+
+.contact-card .contact-top{
+  min-height: 73px;
+  padding: 10px;
+  color: white;
+  background-color: #515867;
+
+}
+
+.contact-card .contact-top .icon{
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  background-color:white;
+  border-radius: 100px;
+  border: 5px solid white;
+  height: 37px;
+  width: 37px;
+}
+
+.icon .icon-fill{
+  fill: #515867;
+}
+
+.contact-card .name{ 
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.contact-card .company{ 
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.contact-card .contact-bottom{
+  text-align: left;
+  background-color: white;
+  color: #515867;
+  padding: 15px;
+  width: 100%;
+}
+
+.contact-card .contact-bottom a{
+  color:#515867;
+}
+
+
+.contact-card .contact-bottom ul li{
+  list-style: none;
+}
+
+
+.contact-card .contact-bottom .material-icons{
+  color: #515867;
+  font-size: 30px;
+  position: relative;
+  top: 6px;
+  left: -8px;
+}
+
+
+
 
 
 /*

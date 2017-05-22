@@ -20,7 +20,7 @@
 
   <nav class="navbar">
     <div class="navbar-header">
-      <i class="material-icons menu-button" onclick="openSidebar()" style="display:none;">menu</i>
+      <i id="menu-button" class="material-icons" onclick="openSidebar()">menu</i>
       <i class="material-icons menu-button" onclick="closeSidebar()" style="display:none;">close</i>
       <h1>Contacts</h1>
     </div>
@@ -68,7 +68,7 @@
     </ul>
   </nav>
 
-
+  <div class="sidebar-overlay" onclick="closeSidebar()" style="cursor:pointer" id="myOverlay"></div>
   <div id="sidebar" class="sidebar">
     <div class="logo">
       <img src="logo.png" />
@@ -83,162 +83,207 @@
   </div>
 
   <section id="main">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a data-toggle="tab" href="#info">House Info</a></li>
+      <li><a data-toggle="tab" href="#roomates">Roomates</a></li>
+      <li><a data-toggle="tab" href="#contacts">Contacts</a></li>
+    </ul>
     <div class="container">
-      <div class="row">
-        <div class="roomate-header">
-          <strong>House Info</strong>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="roomate-header">
-          <strong>Roomates</strong>
-          <button>Add Roomate</button>
-        </div>
-      </div>
 
-      <hr>
+      <div class="tab-content">
+        <div id="info" class="tab-pane fade in active">
+          <div class="row">
+            <div class="roomate-header">
+              <strong>House Info</strong>
+            </div>
+            <hr>
+          </div>
+        </div>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
-          <div class="user-card">
-            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCMH1oJb9_ryQTCILdmNhcmRfcGhvdG8qKDlkZTdkNDMwOWJkNjQwYjcwMDllNDE5NzkwMGQxNTM3YmNhNGE4YzgwAbmxH0_yXnw4JFhaUa9IcfAODKZW"
-            />
-            <br/>
-            <h6 class="name">Patrick Vickery</h6>
-            <h6 class="email">patrick.vickery@gmail.com</h6>
-            <hr>
-            <div class="info">
-              <div class="info-row">
-                <span><i class="material-icons">attach_money</i>Rent</span>
-                <b>$1500.00</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">access_time</i>Contract Length</span>
-                <b>12 Months</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">event</i>Move Out Date</span>
-                <b>May 1, 2017</b>
-              </div>
-              <br/>
-            </div>
-            <div class="buttons">
-              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
-              <button><i class="material-icons">delete</i> <span>Remove</span></button>
+        <div id="roomates" class="tab-pane fade">
+          <div class="row">
+            <div class="roomate-header">
+              <strong>Roomates</strong>
+              <button>Add Roomate</button>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
-          <div class="user-card">
-            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCOHQ7pqKu_S1BSILdmNhcmRfcGhvdG8qKDg2MmM4MDlmMTc4MzU4NWU4MjMwN2VkYTBlMmI1Y2Q2ZjM5YmY0NjAwAc-jR0peNIlxCXQi6nqSaAdCjHnx"
-            />
-            <br/>
-            <h6 class="name">Mike Dopsa</h6>
-            <h6 class="email">mike.dopsa@gmail.com</h6>
-            <hr>
-            <div class="info">
-              <div class="info-row">
-                <span><i class="material-icons">attach_money</i>Rent</span>
-                <b>$1500.00</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">access_time</i>Contract Length</span>
-                <b>12 Months</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">event</i>Move Out Date</span>
-                <b>May 1, 2017</b>
-              </div>
-              <br/>
-            </div>
-            <div class="buttons">
-              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
-              <button><i class="material-icons">delete</i> <span>Remove</span></button>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
-          <div class="user-card">
-            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECK3u3_bf7Jet1wEiC3ZjYXJkX3Bob3RvKig1NzE2MmM4MjM1N2I1M2YzMmU5ZThkNzE1NzIwNzlmYjk3MzRiMmJiMAHIpIz-8mbFiArKvKFtvFrUHJzoiw"
-            />
-            <br/>
-            <h6 class="name">Swapnil Shah</h6>
-            <h6 class="email">swapnil.shah@gmail.com</h6>
-            <hr>
-            <div class="info">
-              <div class="info-row">
-                <span><i class="material-icons">attach_money</i>Rent</span>
-                <b>$1500.00</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">access_time</i>Contract Length</span>
-                <b>12 Months</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">event</i>Move Out Date</span>
-                <b>May 1, 2017</b>
-              </div>
-              <br/>
-            </div>
-            <div class="buttons">
-              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
-              <button><i class="material-icons">delete</i> <span>Remove</span></button>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
-          <div class="user-card">
-            <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECNbxse7u_LG_zwEiC3ZjYXJkX3Bob3RvKihjZDEyNzllYTEzZDc2MGM3YTMwMThkZWFiYjlmNjEyNzA5MTMwZDA1MAGNXnF3R9PvUVDtCGquZGLaoe09eA"
-            />
-            <br/>
-            <h6 class="name">Gordan Monk</h6>
-            <h6 class="email">gord.monk@gmail.com</h6>
-            <hr>
-            <div class="info">
-              <div class="info-row">
-                <span><i class="material-icons">attach_money</i>Rent</span>
-                <b>$1500.00</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">access_time</i>Contract Length</span>
-                <b>12 Months</b>
-              </div>
-              <br/>
-              <div class="info-row">
-                <span><i class="material-icons">event</i>Move Out Date</span>
-                <b>May 1, 2017</b>
-              </div>
-              <br/>
-            </div>
-            <div class="buttons">
-              <button> <i class="material-icons">edit</i> <span>Edit</span></button>
-              <button><i class="material-icons">delete</i> <span>Remove</span></button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <hr>
-      <div class="row">
-        <div class="roomate-header">
-          <strong>Contacts</strong>
-          <button>Add Contact</button>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="user-card">
+                <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCMH1oJb9_ryQTCILdmNhcmRfcGhvdG8qKDlkZTdkNDMwOWJkNjQwYjcwMDllNDE5NzkwMGQxNTM3YmNhNGE4YzgwAbmxH0_yXnw4JFhaUa9IcfAODKZW"
+                />
+                <br/>
+                <h6 class="name">Patrick Vickery</h6>
+                <h6 class="email">patrick.vickery@gmail.com</h6>
+                <hr>
+                <div class="info">
+                  <div class="info-row">
+                    <span><i class="material-icons">attach_money</i>Rent</span>
+                    <b>$1500.00</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">access_time</i>Contract Length</span>
+                    <b>12 Months</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">event</i>Move Out Date</span>
+                    <b>May 1, 2017</b>
+                  </div>
+                  <br/>
+                </div>
+                <div class="buttons">
+                  <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+                  <button><i class="material-icons">delete</i> <span>Remove</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="user-card">
+                <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABDCOHQ7pqKu_S1BSILdmNhcmRfcGhvdG8qKDg2MmM4MDlmMTc4MzU4NWU4MjMwN2VkYTBlMmI1Y2Q2ZjM5YmY0NjAwAc-jR0peNIlxCXQi6nqSaAdCjHnx"
+                />
+                <br/>
+                <h6 class="name">Mike Dopsa</h6>
+                <h6 class="email">mike.dopsa@gmail.com</h6>
+                <hr>
+                <div class="info">
+                  <div class="info-row">
+                    <span><i class="material-icons">attach_money</i>Rent</span>
+                    <b>$1500.00</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">access_time</i>Contract Length</span>
+                    <b>12 Months</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">event</i>Move Out Date</span>
+                    <b>May 1, 2017</b>
+                  </div>
+                  <br/>
+                </div>
+                <div class="buttons">
+                  <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+                  <button><i class="material-icons">delete</i> <span>Remove</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="user-card">
+                <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECK3u3_bf7Jet1wEiC3ZjYXJkX3Bob3RvKig1NzE2MmM4MjM1N2I1M2YzMmU5ZThkNzE1NzIwNzlmYjk3MzRiMmJiMAHIpIz-8mbFiArKvKFtvFrUHJzoiw"
+                />
+                <br/>
+                <h6 class="name">Swapnil Shah</h6>
+                <h6 class="email">swapnil.shah@gmail.com</h6>
+                <hr>
+                <div class="info">
+                  <div class="info-row">
+                    <span><i class="material-icons">attach_money</i>Rent</span>
+                    <b>$1500.00</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">access_time</i>Contract Length</span>
+                    <b>12 Months</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">event</i>Move Out Date</span>
+                    <b>May 1, 2017</b>
+                  </div>
+                  <br/>
+                </div>
+                <div class="buttons">
+                  <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+                  <button><i class="material-icons">delete</i> <span>Remove</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="user-card">
+                <img src="https://docs.google.com/c/u/0/photos/public/AIbEiAIAAABECNbxse7u_LG_zwEiC3ZjYXJkX3Bob3RvKihjZDEyNzllYTEzZDc2MGM3YTMwMThkZWFiYjlmNjEyNzA5MTMwZDA1MAGNXnF3R9PvUVDtCGquZGLaoe09eA"
+                />
+                <br/>
+                <h6 class="name">Gordan Monk</h6>
+                <h6 class="email">gord.monk@gmail.com</h6>
+                <hr>
+                <div class="info">
+                  <div class="info-row">
+                    <span><i class="material-icons">attach_money</i>Rent</span>
+                    <b>$1500.00</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">access_time</i>Contract Length</span>
+                    <b>12 Months</b>
+                  </div>
+                  <br/>
+                  <div class="info-row">
+                    <span><i class="material-icons">event</i>Move Out Date</span>
+                    <b>May 1, 2017</b>
+                  </div>
+                  <br/>
+                </div>
+                <div class="buttons">
+                  <button> <i class="material-icons">edit</i> <span>Edit</span></button>
+                  <button><i class="material-icons">delete</i> <span>Remove</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
-          <div class="user-card">
-            <h6 class="name">Patrick Vickery</h6>
-            <h6 class="email">patrick.vickery@gmail.com</h6>
+
+        <div id="contacts" class="tab-pane fade">
+          <div class="row">
+            <div class="roomate-header">
+              <strong>Contacts</strong>
+              <button>Add Contact</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="contact-card">
+                <div class="contact-top">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path class="icon-fill" d="M3,3A1,1 0 0,0 2,4V8L2,9.5C2,11.19 3.03,12.63 4.5,13.22V19.5A1.5,1.5 0 0,0 6,21A1.5,1.5 0 0,0 7.5,19.5V13.22C8.97,12.63 10,11.19 10,9.5V8L10,4A1,1 0 0,0 9,3A1,1 0 0,0 8,4V8A0.5,0.5 0 0,1 7.5,8.5A0.5,0.5 0 0,1 7,8V4A1,1 0 0,0 6,3A1,1 0 0,0 5,4V8A0.5,0.5 0 0,1 4.5,8.5A0.5,0.5 0 0,1 4,8V4A1,1 0 0,0 3,3M19.88,3C19.75,3 19.62,3.09 19.5,3.16L16,5.25V9H12V11H13L14,21H20L21,11H22V9H18V6.34L20.5,4.84C21,4.56 21.13,4 20.84,3.5C20.63,3.14 20.26,2.95 19.88,3Z"
+                    />
+                  </svg>
+                  <h6 class="name">Patrick Vickery</h6>
+                  <h6 class="company">Pizza Pizza</h6>
+                </div>
+                <div class="contact-bottom">
+                  <ul>
+                    <li><a><i class="material-icons">description</i> Pizza</a></li>
+                    <li><a href="tel:555-555-5555"><i class="material-icons">phone</i> 905-462-5398</a></li>
+                    <li><a href="http://www.pizzapizza.ca/" target="_blank"><i class="material-icons">public</i> PizzaPizza.ca</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4" align="center">
+              <div class="contact-card">
+                <div class="contact-top">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path class="icon-fill" d="M3,3A1,1 0 0,0 2,4V8L2,9.5C2,11.19 3.03,12.63 4.5,13.22V19.5A1.5,1.5 0 0,0 6,21A1.5,1.5 0 0,0 7.5,19.5V13.22C8.97,12.63 10,11.19 10,9.5V8L10,4A1,1 0 0,0 9,3A1,1 0 0,0 8,4V8A0.5,0.5 0 0,1 7.5,8.5A0.5,0.5 0 0,1 7,8V4A1,1 0 0,0 6,3A1,1 0 0,0 5,4V8A0.5,0.5 0 0,1 4.5,8.5A0.5,0.5 0 0,1 4,8V4A1,1 0 0,0 3,3M19.88,3C19.75,3 19.62,3.09 19.5,3.16L16,5.25V9H12V11H13L14,21H20L21,11H22V9H18V6.34L20.5,4.84C21,4.56 21.13,4 20.84,3.5C20.63,3.14 20.26,2.95 19.88,3Z"
+                    />
+                  </svg>
+                  <h6 class="company">Wok To Go</h6>
+                </div>
+                <div class="contact-bottom">
+                  <ul>
+                    <li><a><i class="material-icons">description</i> Chinese Food</a></li>
+                    <li><a href="tel:555-555-5555"><i class="material-icons">phone</i> 905-897-1688</a></li>
+                    <li><a href="https://www.woktogoexpress.ca/" target="_blank"><i class="material-icons">public</i> https://www.woktogoexpress.ca/</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
