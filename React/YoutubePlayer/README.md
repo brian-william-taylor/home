@@ -1,5 +1,5 @@
 # ReduxSimpleStarter
-
+All code is from following along with udemy course: 'Modern React with Redux'
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
 ### Getting Started
