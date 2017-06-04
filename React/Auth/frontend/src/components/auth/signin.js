@@ -37,7 +37,7 @@ class Signin extends Component {
         <Field name="email" component={renderInput} type="text" />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Email</label>
+        <label htmlFor="password">Password</label>
         <Field name="password" component={renderInput} type="password" />
       </div>
       {this.renderAlert()}
